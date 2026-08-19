@@ -1,108 +1,548 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f6c915">
-<title>Yellow StormGears | BIOGLOW Team HQ</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6c915">
+  <meta name="description" content="Yellow StormGears BIOGLOW first-year FLL Challenge reference guide">
+  <title>Yellow StormGears | BIOGLOW Team HQ</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main class="shell">
-<section class="hero">
-<span class="pill">⚙️ Yellow StormGears</span>
-<h1>BIOGLOW Team HQ 🌿</h1>
-<p>A kid-friendly guide for the 2026-2027 FIRST LEGO League Challenge season. Learn the theme, understand scoring, build a reliable robot, create an Innovation Project, practice Core Values, and know what to focus on each week.</p>
-<div class="actions"><button class="btn" data-go="start">Start Here</button><button class="btn alt" data-go="missions">Practice Scoring</button><button class="btn alt" id="shareBtn">Share App</button></div>
-<div class="progress"><div class="track"><div class="bar" id="progressBar"></div></div><b id="progressLabel">0% team prep complete</b></div>
-</section>
-<nav class="nav" aria-label="App sections">
-<button class="active" data-tab="start">🌱 Start Here</button><button data-tab="missions">🤖 Missions + Score</button><button data-tab="robot">🧠 Robot Design</button><button data-tab="innovation">💡 Innovation</button><button data-tab="values">🤝 Core Values</button><button data-tab="roadmap">🗓️ Roadmap</button><button data-tab="quiz">🎯 Quiz</button><button data-tab="resources">📚 Official Links</button>
-</nav>
-<section class="panel active" id="start">
-<h2 class="title">What is BIOGLOW?</h2>
-<p class="lead">BIOGLOW is a biodiversity-inspired FIRST LEGO League season. Teams explore how living things, ecosystems, people, science, and technology are connected, then use engineering and innovation to solve challenges.</p>
-<div class="card"><div class="eyebrow">Official season video</div><h3>🎬 BIOGLOW Season Trailer</h3><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/_g9kl7xb8nU" title="FIRST LEGO League BIOGLOW season trailer" allowfullscreen></iframe></div></div>
-<div class="grid g4">
-<article class="card area green"><h3>🤖 Robot Game</h3><p>Complete missions during a 2.5-minute match. Build reliability before complexity.</p></article>
-<article class="card area blue"><h3>🧠 Robot Design</h3><p>Explain how you planned, built, coded, tested, improved, and learned.</p></article>
-<article class="card area purple"><h3>💡 Innovation Project</h3><p>Find a real biodiversity problem, research it, and create an improved solution.</p></article>
-<article class="card area yellow"><h3>🤝 Core Values</h3><p>Show Discovery, Innovation, Impact, Inclusion, Teamwork, and Fun.</p></article>
-</div>
-<div class="notice"><b>Important:</b> Robot Game is only one part of the Challenge experience. Spend time on Robot Design, Innovation Project, and Core Values too.</div>
-<article class="card">
-<div class="eyebrow">How Yellow StormGears works together</div><h3>⚙️ Our Ways of Working</h3>
-<div class="ways">
-<div class="way"><b>1. Team Rules</b><br>Be kind and respectful. Everyone participates. Kids do the work and adults guide. Challenge ideas, not people. Mistakes help us learn.</div>
-<div class="way"><b>2. Rotate Roles</b><br>No permanent coder, builder, or presenter. Rotate building, coding, testing, attachments, research, documentation, presenting, and robot operation.</div>
-<div class="way"><b>3. Work Together</b><br>Start on time, listen while others speak, ask before changing someone else's work, and share robot and computer time fairly.</div>
-<div class="way"><b>4. Handle Disagreements</b><br>Listen to both ideas, build or test when possible, use results to decide, and vote or ask a coach to facilitate when needed.</div>
-<div class="way"><b>5. End Every Meeting</b><br>What did we accomplish? What did not work? What comes next? Who owns each next step? Clean up before leaving.</div>
-<div class="way"><b>6. At Competitions</b><br>Respect judges, referees, volunteers, teammates, and other teams. No blaming. Cheer for others and be honest about our work.</div>
-<div class="way"><b>7. Parent Guidelines</b><br>Encourage without solving. Let kids explain their work. Keep scores in perspective and share concerns privately with coaches.</div>
-<div class="way"><b>8. Safety & Respect</b><br>Everyone should feel safe and welcome. No bullying, harassment, aggression, inappropriate language, or damaging someone's work.</div>
-<div class="way"><b>9. Team Promise</b><br>We learn together, listen, help each other, respect each other, keep trying, and have fun.</div>
-<div class="way"><b>10. FIRST Core Values</b><br>Discovery • Innovation • Impact • Inclusion • Teamwork • Fun</div>
-</div>
-</article>
-<div class="grid g2">
-<article class="card yellow"><h3>⭐ What should we focus on first?</h3><ol><li>Understand a few missions deeply before trying all 15.</li><li>Build a simple, square, repeatable driving base.</li><li>Make every child learn basic movement and attachments.</li><li>Start Innovation Project research early.</li><li>Record tests, failures, changes, and decisions in the Engineering Notebook.</li></ol></article>
-<article class="card green"><h3>Reliable points first</h3><p>For each robot run ask: Does it work at least most of the time? Can we make it simpler? Can we combine nearby missions? Can multiple kids explain the attachment and code?</p><p class="tiny">The reliability target is team coaching guidance, not an official FIRST rule.</p></article>
-</div>
-<div class="card"><h3>✅ Start-Here Checklist</h3><div class="checklist">
-<label class="check"><input data-progress type="checkbox"><span>We watched the BIOGLOW trailer and mission videos.</span></label>
-<label class="check"><input data-progress type="checkbox"><span>Every team member knows the four main Challenge areas.</span></label>
-<label class="check"><input data-progress type="checkbox"><span>We built and checked the mission models and field setup.</span></label>
-<label class="check"><input data-progress type="checkbox"><span>We opened the Robot Game Rulebook and Challenge Updates.</span></label>
-<label class="check"><input data-progress type="checkbox"><span>We can explain biodiversity in our own words.</span></label>
-</div></div>
-</section>
-<section class="panel" id="missions">
-<h2 class="title">BIOGLOW Missions + Practice Scorer</h2>
-<p class="lead">The Robot Game has 15 missions and a 2.5-minute match. Enter the points you earned during practice using the official Rulebook or Scoresheet. This avoids guessing about mission conditions when FIRST publishes updates.</p>
-<div class="card alert"><b>⚠️ Official scoring wins.</b> Use the current Robot Game Rulebook, official scoresheet, and newest Challenge Updates for exact scoring conditions.</div>
-<div class="score-layout"><div><div class="mission-grid" id="missionGrid"></div><div class="card"><h3>Bonus scoring items</h3><label><input id="inspection" type="checkbox"> Equipment inspection bonus +20</label><br><br><label>Precision tokens remaining: <select id="precision"><option value="6">6 = 50</option><option value="5">5 = 50</option><option value="4">4 = 35</option><option value="3">3 = 25</option><option value="2">2 = 15</option><option value="1">1 = 10</option><option value="0">0 = 0</option></select></label></div></div>
-<aside class="scorebox"><div class="eyebrow" style="color:#b9d8be">Practice score</div><div class="score-num" id="scoreTotal">50</div><hr><div>Mission points: <b id="missionTotal">0</b></div><div>Inspection: <b id="inspectionTotal">0</b></div><div>Precision: <b id="precisionTotal">50</b></div><hr><button class="btn" id="resetScore">Reset</button></aside></div>
-<div class="grid g2">
-<article class="card green"><h3>🎯 How to get more points</h3><ul><li>Start with nearby, low-risk missions.</li><li>Use consistent launch positions and alignment guides.</li><li>Build simple attachments that can perform more than one job.</li><li>Test each route repeatedly and record success rate.</li><li>Combine missions only after each one works reliably.</li><li>Practice complete 2.5-minute matches with your robot operators.</li></ul></article>
-<article class="card yellow"><h3>Mission planning board</h3><p><b>Now:</b> Choose 2 to 4 missions that are close to a launch area and easy to repeat.</p><p><b>Next:</b> Combine nearby missions into short routes.</p><p><b>Later:</b> Add harder bonuses only when the current routes are dependable.</p></article>
-</div>
-<p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-rgr.pdf" target="_blank">Open Robot Game Rulebook ↗</a> • <a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-software-scoresheet.pdf" target="_blank">Open official scoresheet ↗</a></p>
-</section>
-<section class="panel" id="robot">
-<h2 class="title">Robot Design: what judges want to understand</h2><p class="lead">Judges want to hear the team's engineering story, including decisions, testing, failures, improvements, and what the kids learned.</p>
-<div class="grid g4"><article class="card"><h3>Build</h3><p>Rigid base, aligned wheels, secured cables, simple attachments, consistent starting position.</p></article><article class="card"><h3>Code</h3><p>Distance, turns, motor control, sensors, reusable blocks, and error recovery.</p></article><article class="card"><h3>Test</h3><p>Run the same program repeatedly, measure success, and change one variable at a time.</p></article><article class="card"><h3>Explain</h3><p>Every child should be able to explain design choices, code, failures, and improvements.</p></article></div>
-<div class="card green"><h3>Engineering Design Process</h3><p><b>Identify → Design → Create → Iterate → Communicate</b></p></div>
-<div class="card"><h3>✅ Robot Design Checklist</h3><div class="checklist">
-<label class="check"><input data-progress type="checkbox"><span>Our robot drives straight and turns consistently.</span></label><label class="check"><input data-progress type="checkbox"><span>We can explain why we chose our robot design.</span></label><label class="check"><input data-progress type="checkbox"><span>We have test results showing what changed and why.</span></label><label class="check"><input data-progress type="checkbox"><span>More than one teammate can explain the code and attachments.</span></label></div></div>
-</section>
-<section class="panel" id="innovation">
-<h2 class="title">Innovation Project: solve a real biodiversity problem</h2><p class="lead">Do not start with a cool invention. Start by finding and understanding a real problem, then research, create, get feedback, improve, and communicate.</p>
-<div class="process"><div class="step"><b>1. Identify</b><span>Choose one specific biodiversity problem that matters to people, animals, plants, or ecosystems.</span></div><div class="step"><b>2. Research</b><span>Use reliable sources and talk with experts or people affected by the problem.</span></div><div class="step"><b>3. Design</b><span>Brainstorm several possible solutions before choosing one.</span></div><div class="step"><b>4. Create</b><span>Make a prototype, model, diagram, experiment, app concept, or demonstration.</span></div><div class="step"><b>5. Iterate</b><span>Share it, collect feedback, test assumptions, and improve the idea.</span></div><div class="step"><b>6. Communicate</b><span>Tell judges the story of the problem, research, solution, feedback, changes, and impact.</span></div></div>
-<div class="grid g2"><article class="card yellow"><h3>Good 4th-grade problem questions</h3><ul><li>What is harming local plants or animals?</li><li>Where do people and wildlife have trouble sharing space?</li><li>How can communities help pollinators or habitats?</li><li>What biodiversity problem do scientists or parks still struggle with?</li><li>What could kids help improve?</li></ul></article><article class="card"><h3>Our project notes</h3><label>Problem idea<textarea data-note="problem" placeholder="What problem are we trying to understand?"></textarea></label><label>Solution idea<textarea data-note="solution" placeholder="How might our solution help?"></textarea></label></article></div>
-<div class="card"><h3>✅ Innovation Project Checklist</h3><div class="checklist"><label class="check"><input data-progress type="checkbox"><span>We chose a specific problem, not just a broad topic.</span></label><label class="check"><input data-progress type="checkbox"><span>We used reliable research and talked to an expert or stakeholder if possible.</span></label><label class="check"><input data-progress type="checkbox"><span>We created something that shows how our solution works.</span></label><label class="check"><input data-progress type="checkbox"><span>We received feedback and changed our solution because of what we learned.</span></label><label class="check"><input data-progress type="checkbox"><span>Every teammate can explain our project story.</span></label></div></div>
-</section>
-<section class="panel" id="values"><h2 class="title">Core Values: how Yellow StormGears works</h2><div class="grid g3"><article class="card">🔎 <b>Discovery</b><br>We explore new skills and ideas.</article><article class="card">💡 <b>Innovation</b><br>We use creativity and persistence.</article><article class="card">🌎 <b>Impact</b><br>We apply what we learn to improve our world.</article><article class="card">🫶 <b>Inclusion</b><br>We respect each other and welcome differences.</article><article class="card">🤝 <b>Teamwork</b><br>We are stronger when we work together.</article><article class="card">🎉 <b>Fun</b><br>We enjoy and celebrate what we do.</article></div><div class="card green"><h3>Gracious Professionalism</h3><p>Compete hard while treating teammates, other teams, judges, referees, and volunteers with respect and kindness.</p></div><div class="card"><h3>✅ Core Values Checklist</h3><div class="checklist"><label class="check"><input data-progress type="checkbox"><span>Everyone gets meaningful opportunities to build, code, research, and speak.</span></label><label class="check"><input data-progress type="checkbox"><span>We can describe examples of teamwork and disagreements we solved respectfully.</span></label><label class="check"><input data-progress type="checkbox"><span>We support other teams and have fun together.</span></label></div></div></section>
-<section class="panel" id="roadmap"><h2 class="title">12-Week Season Roadmap</h2><div class="card"><div class="week"><b>Weeks 1-2</b><span>Theme, Ways of Working, mission models, field setup, basic driving, Project Sparks.</span></div><div class="week"><b>Weeks 3-4</b><span>Choose early robot missions, learn turns and attachments, shortlist project problems.</span></div><div class="week"><b>Weeks 5-6</b><span>Make several missions reliable, select the project problem, research and talk to experts.</span></div><div class="week"><b>Weeks 7-8</b><span>Combine missions into routes, create a project prototype, collect feedback and improve.</span></div><div class="week"><b>Weeks 9-10</b><span>Full-match practice, improve the project, prepare Robot Design explanations.</span></div><div class="week"><b>Week 11</b><span>Mock judging, timed Robot Game runs, Core Values examples, fix weak areas.</span></div><div class="week"><b>Week 12</b><span>Competition simulation, pack materials, practice calmly, celebrate progress.</span></div></div><div class="notice"><b>Final weeks:</b> avoid major redesigns unless something is truly broken. Reliability and confident explanations often benefit more from practice than a last-minute rebuild.</div></section>
-<section class="panel" id="quiz"><h2 class="title">Yellow StormGears BIOGLOW Quiz</h2><form id="quizForm"><div class="quizq"><b>1. How long is a Robot Game match?</b><label><input name="q1" type="radio" value="a"> 90 seconds</label><label><input name="q1" type="radio" value="b"> 2.5 minutes</label><label><input name="q1" type="radio" value="c"> 5 minutes</label></div><div class="quizq"><b>2. How many BIOGLOW Robot Game missions are there?</b><label><input name="q2" type="radio" value="a"> 10</label><label><input name="q2" type="radio" value="b"> 12</label><label><input name="q2" type="radio" value="c"> 15</label></div><div class="quizq"><b>3. What is a good first robot goal?</b><label><input name="q3" type="radio" value="a"> Make it complicated</label><label><input name="q3" type="radio" value="b"> Make missions repeatable and reliable</label><label><input name="q3" type="radio" value="c"> Use every sensor immediately</label></div><div class="quizq"><b>4. What should happen before choosing an Innovation Project solution?</b><label><input name="q4" type="radio" value="a"> Research and clearly define the problem</label><label><input name="q4" type="radio" value="b"> Build a poster</label><label><input name="q4" type="radio" value="c"> Ask the coach to choose</label></div><div class="quizq"><b>5. What does iterate mean?</b><label><input name="q5" type="radio" value="a"> Do it once and stop</label><label><input name="q5" type="radio" value="b"> Test, learn, change, and test again</label><label><input name="q5" type="radio" value="c"> Copy another team</label></div><div class="quizq"><b>6. Which areas matter to the overall FLL Challenge experience?</b><label><input name="q6" type="radio" value="a"> Only Robot Game</label><label><input name="q6" type="radio" value="b"> Robot Game and Innovation only</label><label><input name="q6" type="radio" value="c"> Robot Game, Robot Design, Innovation Project, and Core Values</label></div><button class="btn" type="submit">Check Score</button><div class="result" id="quizResult"></div></form></section>
-<section class="panel" id="resources"><h2 class="title">Official FIRST BIOGLOW Resources</h2><p class="lead">Use this app to learn and organize. FIRST's official materials remain the source of truth for rules, scoring, judging, updates, and event requirements.</p><div class="card alert"><b>⚠️ Check Challenge Updates regularly.</b><p>New official updates can clarify or correct rules and supersede older guidance.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-updates.pdf" target="_blank">Open Challenge Updates ↗</a></div>
-<div class="grid g2"><article class="card green"><h3>⭐ Team Members: Start Here</h3><ol><li>Engineering Notebook</li><li>Robot Game Rulebook</li><li>Session Slides</li><li>Judging Rubrics</li></ol></article><article class="card blue"><h3>⭐ Coaches & Mentors: Start Here</h3><ol><li>Team Meeting Guide</li><li>Engineering Notebook</li><li>Robot Game Rulebook</li><li>Judging Rubrics</li><li>Challenge Updates</li></ol></article></div>
-<div class="grid g2">
-<div class="resource"><span class="tag">EVERYONE</span><h3>🌱 BIOGLOW Season Materials</h3><p>Main hub for the latest guides, building instructions, videos, judging materials, scoresheets, slides, and updates.</p><a href="https://www.firstinspires.org/resources/library/fll/season-materials" target="_blank">Open resource page ↗</a></div>
-<div class="resource"><span class="tag">COACHES</span><h3>📘 Team Meeting Guide</h3><p>Organize meetings and guide Robot Game, Innovation Project, Core Values, and the Engineering Design Process.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-tmg.pdf" target="_blank">Open guide ↗</a></div>
-<div class="resource"><span class="tag">TEAM</span><h3>📗 Engineering Notebook</h3><p>Season workbook for goals, Project Sparks, research, robot design, testing, reflections, and progress.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-en.pdf" target="_blank">Open notebook ↗</a></div>
-<div class="resource"><span class="tag">ROBOT GAME</span><h3>🤖 Robot Game Rulebook</h3><p>Official field setup, missions, scoring requirements, equipment rules, and match procedures.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-rgr.pdf" target="_blank">Open rulebook ↗</a></div>
-<div class="resource"><span class="tag">JUDGING</span><h3>🏆 Judging Rubrics</h3><p>Official rubric for Innovation Project, Robot Design, Core Values, and the engineering process.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-rubrics-color.pdf" target="_blank">Open rubrics ↗</a></div>
-<div class="resource"><span class="tag">AWARDS</span><h3>🥇 Awards and Allocation</h3><p>Explains event awards and how teams are evaluated.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-awards.pdf" target="_blank">Open awards guide ↗</a></div>
-<div class="resource"><span class="tag">OPTIONAL</span><h3>👏 Coach/Mentor Award Form</h3><p>Printable coach or mentor nomination form.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-coach-mentor-nomination-print.pdf" target="_blank">Open form ↗</a></div>
-<div class="resource"><span class="tag">SCORING</span><h3>📊 Robot Game Software Scoresheet</h3><p>Official scoring conditions used to understand what referees record.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-software-scoresheet.pdf" target="_blank">Open scoresheet ↗</a></div>
-<div class="resource"><span class="tag">CLASS PACK</span><h3>📝 Class Pack Scoresheet</h3><p>For teams or events using FIRST LEGO League Class Pack.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-classpack-scoresheet.pdf" target="_blank">Open Class Pack sheet ↗</a></div>
-<div class="resource"><span class="tag">SESSION 1</span><h3>🎯 Session 1 Support Slides</h3><p>Team, theme, mission models, Challenge mat, Project Sparks, and season connections.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-session-slide-1.pptx" target="_blank">Open slides ↗</a></div>
-<div class="resource"><span class="tag">SESSION 2</span><h3>💻 Session 2 Support Slides</h3><p>Driving base, basic programming, turns, SPIKE activities, missions, and project research.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-session-slide-2.pptx" target="_blank">Open slides ↗</a></div>
-<div class="resource"><span class="tag">UPDATES</span><h3>⚠️ Challenge Updates</h3><p>Check regularly before changing strategy and before every event.</p><a href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-updates.pdf" target="_blank">Open updates ↗</a></div>
-</div><div class="notice"><b>Bookmark the Season Materials page.</b> FIRST may add or replace resources during the year. This app is a learning companion and does not replace official FIRST documents.</div></section>
-<footer class="footer">⚙️ Yellow StormGears • BIOGLOW 2026-2027 • Progress and project notes stay only in this browser/device.</footer>
-</main>
-<script src="app.js"></script>
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="team-pill">⚙️ Yellow StormGears</span>
+      <h1>BIOGLOW Team HQ 🌿</h1>
+      <p class="hero-copy">
+        A first-year FIRST LEGO League Challenge reference guide for kids, coaches, and parents.
+        Learn the season, understand robot scoring, build a strong Innovation Project, prepare for
+        judging, and know what to focus on each week.
+      </p>
+      <div class="hero-actions">
+        <button class="btn" data-go="start">Start Here</button>
+        <button class="btn secondary" data-go="missions">Mission Scores</button>
+        <button class="btn secondary" data-go="innovation">Innovation Ideas</button>
+        <button class="btn secondary" id="shareBtn">Share App</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="App sections">
+    <button class="active" data-tab="start">🌱 Start Here</button>
+    <button data-tab="missions">🏆 Mission Scores</button>
+    <button data-tab="robot">🤖 Robot Design</button>
+    <button data-tab="innovation">💡 Innovation Lab</button>
+    <button data-tab="values">🤝 Core Values</button>
+    <button data-tab="roadmap">🗓️ Roadmap</button>
+    <button data-tab="resources">📚 Resources</button>
+  </nav>
+
+  <main class="shell">
+    <section class="panel active" id="start">
+      <h2 class="section-title">Start Here: What is FLL Challenge?</h2>
+      <p class="lead">
+        BIOGLOW is the 2026-2027 FIRST LEGO League Challenge season. The theme is biodiversity:
+        how living things, habitats, people, science, and technology are connected. The team will
+        solve robot missions and also research a real biodiversity problem, design a solution,
+        explain its engineering process, and demonstrate FIRST Core Values.
+      </p>
+
+      <article class="card video-card">
+        <div>
+          <div class="eyebrow">Official FIRST video</div>
+          <h3>🎬 BIOGLOW Season Trailer</h3>
+          <p>Watch this together before diving into missions and project ideas.</p>
+        </div>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/_g9kl7xb8nU"
+            title="FIRST LEGO League BIOGLOW season trailer"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </article>
+
+      <div class="grid four">
+        <article class="card soft-green">
+          <div class="area-num">25%</div>
+          <h3>🏆 Robot Game</h3>
+          <p>Complete missions during a 2.5-minute autonomous robot match.</p>
+        </article>
+        <article class="card soft-blue">
+          <div class="area-num">25%</div>
+          <h3>🤖 Robot Design</h3>
+          <p>Explain strategy, building, coding, testing, failures, and improvements.</p>
+        </article>
+        <article class="card soft-purple">
+          <div class="area-num">25%</div>
+          <h3>💡 Innovation Project</h3>
+          <p>Research a real problem and create, test, improve, and communicate a solution.</p>
+        </article>
+        <article class="card soft-yellow">
+          <div class="area-num">25%</div>
+          <h3>🤝 Core Values</h3>
+          <p>Show Discovery, Innovation, Impact, Inclusion, Teamwork, and Fun.</p>
+        </article>
+      </div>
+
+      <div class="notice important">
+        <strong>First-year mindset:</strong> FLL is not only about getting the highest Robot Game
+        score. A strong team understands its own work, shares roles, can explain what it learned,
+        and improves through testing and feedback.
+      </div>
+
+      <div class="grid two">
+        <article class="card">
+          <div class="eyebrow">The words kids should know</div>
+          <h3>FLL Vocabulary</h3>
+          <dl class="terms">
+            <div><dt>Mission</dt><dd>A robot task that can earn points.</dd></div>
+            <div><dt>Autonomous</dt><dd>The robot runs after launch without a person driving it.</dd></div>
+            <div><dt>Technicians</dt><dd>Team members at the competition table handling the robot.</dd></div>
+            <div><dt>Attachment</dt><dd>A robot mechanism built to help complete one or more missions.</dd></div>
+            <div><dt>Precision Tokens</dt><dd>Tokens lost after certain robot interruptions. Keeping more can add points.</dd></div>
+            <div><dt>Iteration</dt><dd>Testing, learning, changing something, and testing again.</dd></div>
+            <div><dt>Gracious Professionalism</dt><dd>Doing great work while respecting and helping others.</dd></div>
+            <div><dt>Coopertition</dt><dd>Competing and cooperating at the same time.</dd></div>
+          </dl>
+        </article>
+        <article class="card soft-yellow">
+          <div class="eyebrow">What to focus on first</div>
+          <h3>Five priorities for Year 1</h3>
+          <ul class="guide-list">
+            <li>Learn the field and understand several missions before trying to solve everything.</li>
+            <li>Build a robot that starts the same way and moves predictably.</li>
+            <li>Make every child build, code, research, test, and explain at some point.</li>
+            <li>Start the Innovation Project early and talk to a real expert.</li>
+            <li>Use the Engineering Notebook to remember decisions, failures, feedback, and improvements.</li>
+          </ul>
+        </article>
+      </div>
+
+      <article class="card ways-card" id="ways-of-working">
+        <div class="eyebrow">How Yellow StormGears works together</div>
+        <h3>⚙️ Our Ways of Working</h3>
+        <p>
+          Learn, build, solve problems, compete as a team, and have fun. The agreement below is a
+          reference, not a form to fill out.
+        </p>
+        <img class="ways-poster" src="ways-of-working.jpg" alt="Yellow StormGears FLL Team Ways of Working poster">
+        <div class="ways-summary">
+          <span>Be kind and respectful</span>
+          <span>Everyone participates</span>
+          <span>Kids do the work</span>
+          <span>Rotate roles</span>
+          <span>Test ideas, not people</span>
+          <span>Learn from mistakes</span>
+          <span>Respect other teams</span>
+          <span>Have fun</span>
+        </div>
+      </article>
+
+      <div class="grid two">
+        <article class="card soft-green">
+          <h3>Suggested 2-hour meeting rhythm</h3>
+          <div class="timeline">
+            <div><b>10 min</b><span>Team goal and quick learning</span></div>
+            <div><b>45 min</b><span>Robot build, code, and missions</span></div>
+            <div><b>30 min</b><span>Innovation research or prototype</span></div>
+            <div><b>20 min</b><span>Repeatable testing and data</span></div>
+            <div><b>15 min</b><span>What worked, what failed, what is next</span></div>
+          </div>
+          <p class="tiny">This is coaching guidance, not an official FIRST requirement.</p>
+        </article>
+        <article class="card alert-card">
+          <h3>Common first-year traps</h3>
+          <ul class="guide-list">
+            <li>One child becomes the permanent coder or builder.</li>
+            <li>Adults fix the robot instead of asking kids guiding questions.</li>
+            <li>The team chases difficult points before reliable points.</li>
+            <li>The Innovation Project starts too late.</li>
+            <li>Kids memorize a presentation but cannot explain why decisions were made.</li>
+            <li>The team forgets to check official Challenge Updates.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="missions">
+      <h2 class="section-title">BIOGLOW Mission Scores</h2>
+      <p class="lead">
+        No calculator or data entry is needed here. Use these cards as a quick scoring reference.
+        Exact referee wording in the official Robot Game Rulebook and the newest Challenge Updates
+        always takes priority.
+      </p>
+
+      <div class="score-summary">
+        <div><span class="big-score">15</span><small>missions</small></div>
+        <div><span class="big-score">460</span><small>mission-condition points shown below</small></div>
+        <div><span class="big-score">50</span><small>max precision-token points</small></div>
+        <div><span class="big-score">20</span><small>equipment inspection bonus</small></div>
+      </div>
+
+      <div class="notice important">
+        <strong>Rule update reminder:</strong> FIRST Challenge Updates can clarify or change how a
+        rule or mission is scored. Check the update document before changing robot strategy.
+      </div>
+
+      <div class="notice">
+        <strong>No Equipment Constraint:</strong> When the official rulebook shows the red
+        no-equipment symbol on a mission, that mission model cannot earn points if it is touching
+        equipment at the end of the match. The symbol applies only to that specific mission.
+      </div>
+
+      <div class="mission-grid">
+        <article class="mission-card"><div class="mission-top"><span>M01</span><b>Drone Survey</b><em>Max 30</em></div><div class="constraint">🚫 No Equipment Constraint</div><ul><li>Drone no longer touching the mat: <strong>20</strong></li><li>Bonus: LiDAR map completely flipped and scan marker at least partly in the survey area: <strong>+10</strong></li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M02</span><b>Exploding Seeds</b><em>Max 30</em></div><ul><li>Each seed no longer touching the stalk: <strong>10 each</strong></li><li>Three seeds can score.</li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M03</span><b>Flip the Rock</b><em>Max 30</em></div><ul><li>Research flag is down: <strong>20</strong></li><li>Bonus: rock returned to its original starting position: <strong>+10</strong></li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M04</span><b>Lucky Leaves</b><em>Max 30</em></div><div class="constraint">🚫 No Equipment Constraint</div><ul><li>One leaf completely removed and no longer touching the nest: <strong>10</strong></li><li>Bonus: second leaf also removed while the katydid remains in its original starting position: <strong>+20</strong></li><li class="note">If the katydid is completely removed from the nest at any time, the bonus is unavailable. If it is outside the leaf habitat at match end, this mission scores 0.</li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M05</span><b>Reaching Roots</b><em>Max 20</em></div><div class="constraint">🚫 No Equipment Constraint</div><ul><li>Plant root partially extended: <strong>10</strong></li><li>OR completely extended: <strong>20</strong></li><li class="note">Only one scoring condition can count.</li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M06</span><b>Leafcutter Frenzy</b><em>Max 40</em></div><ul><li>Ant touching the nest and leaf fragments contained within the nest: <strong>10 each fragment</strong></li><li>Four fragments can score.</li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M07</span><b>Humongous Fungus</b><em>Max 40</em></div><div class="constraint">🚫 No Equipment Constraint</div><ul><li>Mycelium completely extended: <strong>20</strong></li><li>Connection with opposing team's fully extended plant root: <strong>+10 each</strong>, up to two bonuses</li><li class="note">Connection bonus is not available in remote events or when there is no opposing team.</li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M08</span><b>Tangled</b><em>Max 30</em></div><ul><li>Vine touching the mat: <strong>30</strong></li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M09</span><b>Research Platform</b><em>Max 30</em></div><div class="constraint">🚫 No Equipment Constraint</div><ul><li>Research platform raised: <strong>10</strong></li><li>Camera trap deployed: <strong>10</strong></li><li>Seed no longer touching the tree: <strong>10</strong></li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M10</span><b>Fragile Microhabitats</b><em>Max 20</em></div><div class="constraint">🚫 No Equipment Constraint</div><ul><li>Spider habitat remains in its original starting position: <strong>10</strong></li><li>Snail habitat remains in its original starting position: <strong>10</strong></li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M11</span><b>Window to the Past</b><em>Max 20</em></div><ul><li>Root cover down and touching the mat: <strong>20</strong></li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M12</span><b>Forest Elder</b><em>Max 30</em></div><div class="constraint">🚫 No Equipment Constraint</div><ul><li>Cane completely raised and touching the tree: <strong>20</strong></li><li>Support tie around the post: <strong>10</strong></li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M13</span><b>Keystone Species</b><em>Max 30</em></div><ul><li>Team's keystone species is on the restoration platform and the young trees are raised: <strong>30</strong></li><li class="note">The team builds its keystone species model from the designated bricks.</li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M14</span><b>Seeds of Renewal</b><em>Max 40</em></div><ul><li>Seeds contained in the replantation station: <strong>5 each</strong></li><li>Bonus for those seeds also touching the mat: <strong>+5 each</strong></li><li>Four seeds can score.</li></ul></article>
+        <article class="mission-card"><div class="mission-top"><span>M15</span><b>Biocentric Architecture</b><em>Max 40</em></div><div class="constraint">🚫 No Equipment Constraint</div><ul><li>Nesting canopy raised: <strong>10</strong></li><li>Garden skylight completely in: <strong>10</strong></li><li>Compost hatch completely opened and touching the mat: <strong>10</strong></li><li>Environmental bonus for completing the greatest ecological need at the model's dock: <strong>+10</strong></li><li class="note">Only one environmental bonus is possible.</li></ul></article>
+      </div>
+
+      <div class="grid two">
+        <article class="card soft-blue">
+          <h3>Precision Token Points</h3>
+          <table class="score-table">
+            <thead><tr><th>Tokens left</th><th>Points</th></tr></thead>
+            <tbody>
+              <tr><td>6</td><td>50</td></tr>
+              <tr><td>5</td><td>50</td></tr>
+              <tr><td>4</td><td>35</td></tr>
+              <tr><td>3</td><td>25</td></tr>
+              <tr><td>2</td><td>15</td></tr>
+              <tr><td>1</td><td>10</td></tr>
+              <tr><td>0</td><td>0</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Why it matters:</strong> reducing unnecessary robot interruptions protects valuable points.</p>
+        </article>
+        <article class="card soft-yellow">
+          <h3>How to choose missions for a first-year team</h3>
+          <ol class="guide-list numbered">
+            <li>Look for a clear scoring condition the kids understand.</li>
+            <li>Prefer short travel distance and simple attachment movement.</li>
+            <li>Test one mission at least 5 to 10 times.</li>
+            <li>Record how many times it works without help.</li>
+            <li>Only combine missions after each individual action is repeatable.</li>
+            <li>Add high-risk bonuses later.</li>
+          </ol>
+          <p class="tiny">Simple scoring wording does not always mean an easy robot route. Test on the actual field.</p>
+        </article>
+      </div>
+
+      <article class="card">
+        <h3>A practical Robot Game progression</h3>
+        <div class="strategy-steps">
+          <div><b>Stage 1</b><span>Get 2 to 3 missions working separately.</span></div>
+          <div><b>Stage 2</b><span>Make every launch position repeatable.</span></div>
+          <div><b>Stage 3</b><span>Combine nearby missions into short runs.</span></div>
+          <div><b>Stage 4</b><span>Practice recovery when one run fails.</span></div>
+          <div><b>Stage 5</b><span>Run the complete 2.5-minute match again and again.</span></div>
+        </div>
+      </article>
+
+      <p class="link-row">
+        <a class="text-link" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-rgr.pdf">Official Robot Game Rulebook ↗</a>
+        <a class="text-link" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-software-scoresheet.pdf">Official Scoresheet ↗</a>
+        <a class="text-link" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-updates.pdf">Challenge Updates ↗</a>
+      </p>
+    </section>
+
+    <section class="panel" id="robot">
+      <h2 class="section-title">Robot Design: Learn the Engineering Story</h2>
+      <p class="lead">
+        Judges do not only want to see a finished robot. They want the kids to explain how the team
+        identified challenges, designed ideas, created solutions, tested them, improved them, and
+        communicated what it learned.
+      </p>
+
+      <div class="grid four">
+        <article class="card"><h3>🧱 Build</h3><p>Rigid driving base, aligned wheels, secured wires, accessible ports, and attachments that are easy to change.</p></article>
+        <article class="card"><h3>💻 Code</h3><p>Reliable distance, turns, motor control, sensor use, reusable blocks, and readable program names.</p></article>
+        <article class="card"><h3>🧪 Test</h3><p>Repeat the same run, measure success, change one thing at a time, and keep evidence of improvements.</p></article>
+        <article class="card"><h3>🗣️ Explain</h3><p>More than one child should be able to explain strategy, attachments, code, failures, and design choices.</p></article>
+      </div>
+
+      <article class="card soft-green">
+        <h3>Engineering Design Process</h3>
+        <div class="process-line">
+          <span>Identify</span><span>Design</span><span>Create</span><span>Iterate</span><span>Communicate</span>
+        </div>
+      </article>
+
+      <div class="grid two">
+        <article class="card">
+          <h3>Robot skills worth learning early</h3>
+          <ul class="guide-list">
+            <li>Move a known distance forward and backward.</li>
+            <li>Turn left and right consistently.</li>
+            <li>Use a wall or jig to align the robot before launch.</li>
+            <li>Run a motor attachment a controlled amount.</li>
+            <li>Use functions or custom blocks for repeated code.</li>
+            <li>Understand when a sensor can improve reliability.</li>
+            <li>Reset and recover quickly after a failed run.</li>
+          </ul>
+        </article>
+        <article class="card soft-blue">
+          <h3>Questions judges may ask</h3>
+          <ul class="guide-list">
+            <li>How did you decide which missions to solve?</li>
+            <li>What part of the robot changed the most?</li>
+            <li>What test failed, and what did you learn?</li>
+            <li>How did you make your programs more reliable?</li>
+            <li>What attachment are you most proud of?</li>
+            <li>How did team members share coding and building?</li>
+          </ul>
+        </article>
+      </div>
+
+      <article class="card soft-yellow">
+        <h3>Robot Design reference: what “ready” looks like</h3>
+        <ul class="reference-list">
+          <li><span>✓</span>The kids can explain the robot without the coach speaking for them.</li>
+          <li><span>✓</span>The team has examples of a failure, a change, and a better result.</li>
+          <li><span>✓</span>Multiple kids understand the code and attachments.</li>
+          <li><span>✓</span>The team can explain why it chose its mission strategy.</li>
+          <li><span>✓</span>The Engineering Notebook contains useful evidence, not just final answers.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel" id="innovation">
+      <h2 class="section-title">Innovation Lab: From Biodiversity Problem to Prototype</h2>
+      <p class="lead">
+        The best 4th-grade projects usually start with a problem kids can observe or understand
+        locally. The prototype does not need to be expensive, electronic, or perfect. It needs to
+        help the team test and improve its idea.
+      </p>
+
+      <div class="process-grid">
+        <article><b>1. Identify</b><span>Choose one clear biodiversity problem.</span></article>
+        <article><b>2. Research</b><span>Learn what already exists and who is affected.</span></article>
+        <article><b>3. Design</b><span>Sketch several solutions before choosing.</span></article>
+        <article><b>4. Create</b><span>Build something others can see or test.</span></article>
+        <article><b>5. Iterate</b><span>Get feedback and make meaningful changes.</span></article>
+        <article><b>6. Communicate</b><span>Explain problem, evidence, solution, feedback, and impact.</span></article>
+      </div>
+
+      <div class="notice">
+        <strong>Great 4th-grade project test:</strong> Can the kids explain the problem in one
+        sentence, build a simple prototype in one or two meetings, test one important idea, and
+        find a real person who can give useful feedback?
+      </div>
+
+      <h3 class="sub-title">Project Idea Library</h3>
+      <p class="section-note">These are starting points. The team should research the problem and create its own solution.</p>
+      <div class="idea-grid">
+        <article class="idea-card featured"><div class="idea-tag">Strong first-year choice</div><h4>🐦 Bird-Safe Windows</h4><p><b>Problem:</b> Birds can collide with reflective or transparent glass.</p><p><b>Kid question:</b> How could a school or home window become easier for birds to see without making the room dark?</p><p><b>Prototype:</b> Clear plastic sheets or picture frames with several visible pattern designs. Test visibility from different distances and angles, then improve the pattern.</p><p><b>Ask:</b> Mass Audubon, a bird biologist, building manager, or local conservation group.</p></article>
+        <article class="idea-card featured"><div class="idea-tag">Strong first-year choice</div><h4>🌼 Pollinator Pathway</h4><p><b>Problem:</b> Pollinators need connected food and habitat through the growing season.</p><p><b>Kid question:</b> Could small native-plant patches make a schoolyard or neighborhood more useful for pollinators?</p><p><b>Prototype:</b> A scaled cardboard or LEGO site model with several planting layouts, plus a seasonal “bloom calendar” showing when food is available.</p><p><b>Ask:</b> Native Plant Trust, Arnold Arboretum, Mass Audubon, a local garden club, or a plant ecologist.</p></article>
+        <article class="idea-card featured"><div class="idea-tag">Strong first-year choice</div><h4>🗺️ Schoolyard Biodiversity Map</h4><p><b>Problem:</b> People often do not know which parts of a schoolyard support the most living things.</p><p><b>Kid question:</b> Can a simple observation system help a school protect or improve biodiversity hotspots?</p><p><b>Prototype:</b> A paper or digital map with observation zones, species cards, habitat scores, and a mock dashboard that suggests improvements.</p><p><b>Ask:</b> A biology teacher, city conservation staff, MassWildlife, SciStarter, or a university ecologist.</p></article>
+        <article class="idea-card featured"><div class="idea-tag">Strong first-year choice</div><h4>💡 Wildlife-Friendly Night Lighting</h4><p><b>Problem:</b> Artificial light can change the behavior of insects and other wildlife.</p><p><b>Kid question:</b> Can lighting be directed where people need it while reducing unnecessary light into habitat?</p><p><b>Prototype:</b> A shoebox street or park with small LEDs and interchangeable shields. Compare how much light spills into a model habitat.</p><p><b>Ask:</b> An ecologist, town sustainability staff, a lighting engineer, or Mass Audubon.</p></article>
+        <article class="idea-card featured"><div class="idea-tag">Strong first-year choice</div><h4>🌿 Invasive Plant Early Warning</h4><p><b>Problem:</b> Invasive plants can spread before people notice them.</p><p><b>Kid question:</b> How could kids or families spot and report a few priority invasive plants more easily?</p><p><b>Prototype:</b> Simple field ID cards, a color-coded map, QR-code concept, or mock app screens. Test whether another student can identify examples correctly.</p><p><b>Ask:</b> Native Plant Trust, a town conservation commission, or a plant ecologist.</p></article>
+        <article class="idea-card"><h4>🌧️ Rain Garden for Habitat</h4><p><b>Problem:</b> Fast runoff can carry pollution and leave little habitat value.</p><p><b>Prototype:</b> Two tray landscapes, one conventional and one rain-garden design. Pour equal water and compare runoff while showing where native plants could live.</p></article>
+        <article class="idea-card"><h4>🌉 Mini Wildlife Corridor</h4><p><b>Problem:</b> Roads, fences, and development can break habitat into disconnected pieces.</p><p><b>Prototype:</b> LEGO or cardboard landscape with several corridor designs. Use tokens or a simple rule-based simulation to compare connectivity.</p></article>
+        <article class="idea-card"><h4>🗑️ Stream Litter Interceptor</h4><p><b>Problem:</b> Trash can enter streams while wildlife still needs to move through the water.</p><p><b>Prototype:</b> A tabletop water channel with several removable barrier designs. Use safe floating objects to compare litter capture and open passage.</p></article>
+        <article class="idea-card"><h4>🌳 Tree Health Helper</h4><p><b>Problem:</b> Young urban trees face heat, dry soil, compaction, and damage.</p><p><b>Prototype:</b> A model tree pit with different mulch, shade, or watering concepts, plus a simple observation guide for signs of stress.</p></article>
+        <article class="idea-card"><h4>📷 Wildlife Observation Station</h4><p><b>Problem:</b> People need better information about which animals use an area and when.</p><p><b>Prototype:</b> A mock camera-trap housing, observation protocol, species log, and dashboard concept. No animals need to be captured or disturbed.</p></article>
+        <article class="idea-card"><h4>🍂 Soil Life Protection</h4><p><b>Problem:</b> Removing all leaves and dead plant material can reduce shelter and food for small organisms.</p><p><b>Prototype:</b> A schoolyard “leave the leaves” zone plan, signage, and miniature habitat layers that explain where organisms live.</p></article>
+        <article class="idea-card"><h4>🌾 Native Seed Recovery</h4><p><b>Problem:</b> Habitat restoration needs the right native plants in the right places.</p><p><b>Prototype:</b> A seed-sorting or planting-planner concept that matches mock seed types to sun, moisture, and habitat conditions.</p></article>
+      </div>
+
+      <h3 class="sub-title">What Can a 4th-Grade Prototype Look Like?</h3>
+      <div class="grid three">
+        <article class="card"><h3>📦 Physical Model</h3><p>Cardboard, LEGO, craft materials, 3D print, tubes, paper, or recycled materials that demonstrate how a solution works.</p></article>
+        <article class="card"><h3>🧪 Test Rig</h3><p>A simple experiment that compares two or three versions and produces evidence, such as runoff, light spill, visibility, or capture rate.</p></article>
+        <article class="card"><h3>📱 App Mockup</h3><p>Paper screens or a clickable slide deck showing what an app would do. Coding the full app is not required to test the idea.</p></article>
+        <article class="card"><h3>🗺️ System or Map</h3><p>A model showing where a solution goes, how people use it, and how wildlife or habitat benefits.</p></article>
+        <article class="card"><h3>🧰 Toolkit</h3><p>Identification cards, instructions, labels, measurement tools, or a classroom kit that helps people take action.</p></article>
+        <article class="card"><h3>🎭 Demonstration</h3><p>A short role-play or model that shows the problem before the solution and after the solution.</p></article>
+      </div>
+
+      <article class="card soft-green">
+        <h3>The 4th-Grade Prototype Recipe</h3>
+        <ol class="prototype-recipe">
+          <li><b>Write the problem:</b> “We noticed that…”</li>
+          <li><b>Name the user:</b> Who would use or benefit from the solution?</li>
+          <li><b>Sketch three ideas:</b> Do not fall in love with the first idea.</li>
+          <li><b>Build Version 1:</b> Use simple materials and make the main idea visible.</li>
+          <li><b>Choose one test:</b> What important question can the team measure or observe?</li>
+          <li><b>Get feedback:</b> Ask an expert and at least one possible user.</li>
+          <li><b>Build Version 2:</b> Change something because of the feedback or test.</li>
+          <li><b>Save the story:</b> Photograph both versions and explain what improved.</li>
+        </ol>
+      </article>
+
+      <div class="grid two">
+        <article class="card alert-card">
+          <h3>Innovation Project mistakes to avoid</h3>
+          <ul class="guide-list">
+            <li>Choosing a huge topic such as “save all endangered animals.”</li>
+            <li>Building a gadget before understanding the real problem.</li>
+            <li>Calling something “new” without researching existing solutions.</li>
+            <li>Making a prototype but never testing it.</li>
+            <li>Talking to an expert only after the project is finished.</li>
+            <li>Letting adults design the solution.</li>
+          </ul>
+        </article>
+        <article class="card soft-blue">
+          <h3>Seven great expert questions</h3>
+          <ol class="guide-list numbered">
+            <li>Is this a real and important problem?</li>
+            <li>Who or what is most affected?</li>
+            <li>What solutions already exist?</li>
+            <li>What is the biggest weakness in our idea?</li>
+            <li>What should we measure or test?</li>
+            <li>What one change would make our prototype more useful?</li>
+            <li>Who else should we talk to?</li>
+          </ol>
+        </article>
+      </div>
+
+      <h3 class="sub-title">Real Experts and Organizations to Contact</h3>
+      <p class="section-note">
+        Start with educators and local organizations because they are often easiest for elementary
+        teams to reach. A coach or parent should send outreach messages and stay present for calls.
+      </p>
+
+      <div class="expert-grid">
+        <article class="expert-card best"><div class="expert-type">Great first contact</div><h4>🌳 Arnold Arboretum of Harvard University</h4><p><b>Best for:</b> plants, trees, forests, habitats, ecosystems, field observation, and elementary science education.</p><p>The Arboretum has programs specifically for preschool and elementary students and field studies for grades 4-6.</p><a target="_blank" href="https://arboretum.harvard.edu/education/">Education programs ↗</a><a target="_blank" href="https://arboretum.harvard.edu/education/education-partnerships/">Education partnerships/contact ↗</a></article>
+        <article class="expert-card best"><div class="expert-type">Great first contact</div><h4>🦉 Mass Audubon Boston Nature Center</h4><p><b>Best for:</b> local wildlife, habitats, wetlands, woods, pollinators, schoolyard ecology, and hands-on nature investigations.</p><p>Its school programs serve ages 3-18 and can be tailored to grade-level needs.</p><a target="_blank" href="https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/boston-nature-center/programs-activities/school-programs">School programs and inquiry ↗</a></article>
+        <article class="expert-card best"><div class="expert-type">Great first contact</div><h4>🌱 Native Plant Trust</h4><p><b>Best for:</b> native plants, pollinators, invasive plants, habitat restoration, and New England plant biodiversity.</p><p>Garden in the Woods offers elementary school programs and the organization provides plant conservation expertise.</p><a target="_blank" href="https://www.nativeplanttrust.org/education/school-programs/">School programs ↗</a><a href="mailto:education@NativePlantTrust.org">education@NativePlantTrust.org</a></article>
+        <article class="expert-card best"><div class="expert-type">State biodiversity experts</div><h4>🐢 MassWildlife / Natural Heritage</h4><p><b>Best for:</b> Massachusetts wildlife, endangered species, native biological diversity, habitat protection, and conservation.</p><a target="_blank" href="https://www.mass.gov/orgs/masswildlifes-natural-heritage-endangered-species-program">Natural Heritage & Endangered Species Program ↗</a><a href="mailto:natural.heritage@mass.gov">natural.heritage@mass.gov</a><a href="mailto:Mass.Wildlife@mass.gov">Mass.Wildlife@mass.gov</a></article>
+        <article class="expert-card"><div class="expert-type">Boston University</div><h4>🌸 Prof. Richard Primack</h4><p><b>Best for:</b> conservation biology, plant ecology, climate change, Massachusetts plants and birds, and citizen science.</p><p>His research has used Concord, Massachusetts as a long-term living laboratory.</p><a target="_blank" href="https://www.bu.edu/biology/people/profiles/richard-b-primack/">BU faculty profile ↗</a><a href="mailto:primack@bu.edu">primack@bu.edu</a></article>
+        <article class="expert-card"><div class="expert-type">UMass Lowell</div><h4>🐦 Biology Ecology & Evolution Faculty</h4><p><b>Best for:</b> biodiversity monitoring, ecology, birds, plant ecology, climate change, and evolutionary biology.</p><p>Johanna Choo's listed areas include avian biology and plant ecology. The department has multiple ecology and evolution labs.</p><a target="_blank" href="https://www.uml.edu/sciences/biology/research/">Ecology & Evolution research ↗</a><a href="mailto:Johanna_Choo@uml.edu">Johanna_Choo@uml.edu</a></article>
+        <article class="expert-card"><div class="expert-type">Northeastern University</div><h4>🌊 Prof. Randall Hughes</h4><p><b>Best for:</b> marine biodiversity, conservation, estuaries, and climate adaptation.</p><a target="_blank" href="https://coe.northeastern.edu/people/hughes-randall/">Northeastern profile ↗</a><a href="mailto:rhughes@northeastern.edu">rhughes@northeastern.edu</a></article>
+        <article class="expert-card"><div class="expert-type">UMass Boston</div><h4>🌊 Prof. Jarrett Byrnes</h4><p><b>Best for:</b> marine ecology, biodiversity, ecosystem function, and climate-change ecology.</p><a target="_blank" href="https://www.umb.edu/science-mathematics/academic-departments/biology/faculty-staff/">Biology faculty directory ↗</a><a href="mailto:Jarrett.Byrnes@umb.edu">Jarrett.Byrnes@umb.edu</a></article>
+        <article class="expert-card"><div class="expert-type">Harvard Museum of Natural History</div><h4>🦋 K-12 Programs</h4><p><b>Best for:</b> forests, animals, specimens, biodiversity, life cycles, and guided science learning.</p><a target="_blank" href="https://www.hmnh.harvard.edu/k-12-classes">K-12 programs ↗</a><a href="mailto:hmnhreserve@hmsc.harvard.edu">hmnhreserve@hmsc.harvard.edu</a></article>
+        <article class="expert-card"><div class="expert-type">Citizen science</div><h4>🔎 SciStarter Education + Seek</h4><p><b>Best for:</b> finding age-appropriate real science projects and learning how biodiversity observations can contribute to research.</p><p>SciStarter lists Seek as a biodiversity activity with no account required, which is especially useful for younger students.</p><a target="_blank" href="https://pages.scistarter.org/education/">SciStarter Education Hub ↗</a></article>
+      </div>
+
+      <article class="card outreach-card">
+        <h3>Simple expert outreach message</h3>
+        <div class="message-sample">
+          <p><b>Subject:</b> 4th-grade FIRST LEGO League team question about [topic]</p>
+          <p>Hello [Name],</p>
+          <p>
+            We coach a 4th-grade FIRST LEGO League team in Massachusetts called Yellow StormGears.
+            The students are working on the BIOGLOW biodiversity season and are researching
+            [one-sentence problem]. They have a few short questions and would value feedback on
+            their early solution idea.
+          </p>
+          <p>
+            Would you be willing to answer 3 questions by email or join a 10-15 minute video call
+            with the team and adult coaches present? We would be grateful for any guidance.
+          </p>
+          <p>Thank you!</p>
+        </div>
+        <p class="tiny">Use an adult coach or parent email address. Do not include children's personal contact information.</p>
+      </article>
+    </section>
+
+    <section class="panel" id="values">
+      <h2 class="section-title">Core Values: How the Team Works Matters</h2>
+      <div class="grid three values-grid">
+        <article class="card"><div class="value-icon">🔎</div><h3>Discovery</h3><p>We explore new skills and ideas.</p></article>
+        <article class="card"><div class="value-icon">💡</div><h3>Innovation</h3><p>We use creativity and persistence to solve problems.</p></article>
+        <article class="card"><div class="value-icon">🌎</div><h3>Impact</h3><p>We apply what we learn to improve our world.</p></article>
+        <article class="card"><div class="value-icon">🫶</div><h3>Inclusion</h3><p>We respect each other and welcome differences.</p></article>
+        <article class="card"><div class="value-icon">🤝</div><h3>Teamwork</h3><p>We are stronger when we work together.</p></article>
+        <article class="card"><div class="value-icon">🎉</div><h3>Fun</h3><p>We enjoy and celebrate what we do.</p></article>
+      </div>
+
+      <div class="grid two">
+        <article class="card soft-green"><h3>Gracious Professionalism</h3><p>Compete hard, do high-quality work, and treat teammates, other teams, judges, referees, and volunteers with respect and kindness.</p></article>
+        <article class="card soft-blue"><h3>Coopertition</h3><p>Help and learn from other teams even while competing. Another team's success does not take away from your ability to learn and improve.</p></article>
+      </div>
+
+      <article class="card soft-yellow">
+        <h3>Core Values reference: what kids should be able to describe</h3>
+        <ul class="reference-list">
+          <li><span>✓</span>A disagreement the team solved respectfully.</li>
+          <li><span>✓</span>A time someone learned a new role.</li>
+          <li><span>✓</span>A failure that helped the team improve.</li>
+          <li><span>✓</span>A way the team included everyone's ideas.</li>
+          <li><span>✓</span>How the team helped another person or team.</li>
+          <li><span>✓</span>What made the season fun.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel" id="roadmap">
+      <h2 class="section-title">12-Week First-Year Roadmap</h2>
+      <p class="lead">Adjust the pace to your event date. The goal is to avoid leaving the Innovation Project or judging preparation until the end.</p>
+      <div class="roadmap">
+        <article><div class="week-label">Weeks 1-2</div><div><h3>Explore and Build Foundations</h3><p>Ways of Working, BIOGLOW theme, mission models, field setup, basic driving, Project Sparks, and role rotation.</p></div></article>
+        <article><div class="week-label">Weeks 3-4</div><div><h3>Learn Core Robot Skills</h3><p>Reliable movement, turns, simple attachment, test early missions, shortlist 3 Innovation Project problems.</p></div></article>
+        <article><div class="week-label">Weeks 5-6</div><div><h3>Choose and Research</h3><p>Get several missions repeatable, choose one project problem, research existing solutions, and contact experts.</p></div></article>
+        <article><div class="week-label">Weeks 7-8</div><div><h3>Create and Combine</h3><p>Combine robot missions into short routes, build Innovation Prototype V1, get feedback, and create V2.</p></div></article>
+        <article><div class="week-label">Weeks 9-10</div><div><h3>Practice the Whole Story</h3><p>Full robot matches, project explanation, Robot Design evidence, Core Values examples, and improvements based on weak spots.</p></div></article>
+        <article><div class="week-label">Week 11</div><div><h3>Mock Event</h3><p>Timed matches, mock judging questions, presentation practice, role transitions, and fixing only the biggest reliability issues.</p></div></article>
+        <article><div class="week-label">Week 12</div><div><h3>Competition Ready</h3><p>Final practice, pack equipment, confirm official updates, protect sleep and energy, celebrate the work, and have fun.</p></div></article>
+      </div>
+
+      <div class="grid two">
+        <article class="card"><h3>By the middle of the season</h3><ul class="reference-list"><li><span>✓</span>Several robot missions work reliably.</li><li><span>✓</span>The project problem is specific.</li><li><span>✓</span>The team has contacted at least one expert.</li><li><span>✓</span>Every child has rotated through multiple roles.</li></ul></article>
+        <article class="card"><h3>Two weeks before competition</h3><ul class="reference-list"><li><span>✓</span>The team can run a full Robot Game match.</li><li><span>✓</span>Prototype improvements are documented.</li><li><span>✓</span>Kids can explain Robot Design without adult help.</li><li><span>✓</span>The team has practiced real judging questions.</li></ul></article>
+      </div>
+    </section>
+
+    <section class="panel" id="resources">
+      <h2 class="section-title">Official BIOGLOW Resources</h2>
+      <p class="lead">Use FIRST materials as the source of truth. Bookmark the main season page because FIRST may add or update resources during the season.</p>
+
+      <div class="notice important">
+        <strong>Most important habit:</strong> check Challenge Updates regularly. Official updates
+        supersede older wording when FIRST issues a clarification or correction.
+      </div>
+
+      <div class="resource-grid">
+        <a class="resource-card primary" target="_blank" href="https://www.firstinspires.org/resources/library/fll/season-materials"><span>🌱</span><div><b>BIOGLOW Season Materials</b><small>Main official resource page and best bookmark.</small></div></a>
+        <a class="resource-card" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-en.pdf"><span>📗</span><div><b>Engineering Notebook</b><small>Student workbook for project, robot work, reflection, and progress.</small></div></a>
+        <a class="resource-card" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-rgr.pdf"><span>🤖</span><div><b>Robot Game Rulebook</b><small>Official mission conditions, scoring, equipment, and match rules.</small></div></a>
+        <a class="resource-card alert" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-updates.pdf"><span>⚠️</span><div><b>Challenge Updates</b><small>Rule clarifications and corrections. Check often.</small></div></a>
+        <a class="resource-card" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-rubrics-color.pdf"><span>🏆</span><div><b>Judging Rubrics</b><small>What judges evaluate in Innovation Project, Robot Design, and Core Values.</small></div></a>
+        <a class="resource-card" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-software-scoresheet.pdf"><span>📊</span><div><b>Robot Game Scoresheet</b><small>Official referee scoring conditions.</small></div></a>
+        <a class="resource-card" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-tmg.pdf"><span>📘</span><div><b>Team Meeting Guide</b><small>Coach and mentor guide for organizing sessions.</small></div></a>
+        <a class="resource-card" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-awards.pdf"><span>🥇</span><div><b>Awards and Allocation</b><small>Official award descriptions and event evaluation context.</small></div></a>
+        <a class="resource-card" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-session-slide-1.pptx"><span>🎯</span><div><b>Session 1 Slides</b><small>Team setup, BIOGLOW theme, models, mat, and Project Sparks.</small></div></a>
+        <a class="resource-card" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-session-slide-2.pptx"><span>💻</span><div><b>Session 2 Slides</b><small>Driving base, basic programming, navigation, and project research.</small></div></a>
+        <a class="resource-card" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-coach-mentor-nomination-print.pdf"><span>👏</span><div><b>Coach/Mentor Nomination</b><small>Printable nomination form.</small></div></a>
+        <a class="resource-card muted" target="_blank" href="https://firstinspires.blob.core.windows.net/fll/challenge/2026-27/fll-challenge-bioglow-classpack-scoresheet.pdf"><span>📝</span><div><b>Class Pack Scoresheet</b><small>Relevant for Class Pack events, not usually needed for a standard Challenge team.</small></div></a>
+      </div>
+
+      <div class="grid two">
+        <article class="card soft-green"><h3>Kids: recommended starting order</h3><ol class="guide-list numbered"><li>Engineering Notebook</li><li>Robot Game Rulebook</li><li>Session Slides</li><li>Judging Rubrics</li><li>Challenge Updates whenever a new version appears</li></ol></article>
+        <article class="card soft-blue"><h3>Coaches: recommended starting order</h3><ol class="guide-list numbered"><li>Team Meeting Guide</li><li>Engineering Notebook</li><li>Robot Game Rulebook</li><li>Judging Rubrics</li><li>Challenge Updates</li><li>Awards and Allocation</li></ol></article>
+      </div>
+
+      <article class="card">
+        <h3>More useful learning resources</h3>
+        <div class="link-list">
+          <a target="_blank" href="https://pages.scistarter.org/education/"><b>SciStarter Education</b><span>Age-filtered citizen-science ideas including biodiversity projects.</span></a>
+          <a target="_blank" href="https://www.inaturalist.org/pages/about.html"><b>iNaturalist</b><span>Learn how observations contribute to biodiversity science. Follow age/account rules for children.</span></a>
+          <a target="_blank" href="https://www.nativeplanttrust.org/education/"><b>Native Plant Trust Education</b><span>Native plants, pollinators, botany, and New England conservation.</span></a>
+          <a target="_blank" href="https://www.mass.gov/info-details/explore-massachusetts-wildlife-and-connect-with-nature"><b>MassWildlife Learning Resources</b><span>Massachusetts wildlife, conservation, and educator resources.</span></a>
+          <a target="_blank" href="https://arboretum.harvard.edu/education/"><b>Arnold Arboretum Education</b><span>Plant science and ecosystem learning for elementary students.</span></a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <b>Yellow StormGears • BIOGLOW Team HQ</b>
+    <span>Use official FIRST materials and Challenge Updates as the final authority for competition rules and scoring.</span>
+  </footer>
+  <script src="app.js"></script>
 </body>
 </html>
