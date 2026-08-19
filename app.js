@@ -1,31 +1,15 @@
-þŠmþ&yºÞÃòân¶«Ëñè™æë{Ü™ßì…éez{ì†X§{nÿn)ÿ¦Ã©z¶­Š‰ç¢Ú^®h­µçJ[˜Ý[Ûˆ
-
-HÂˆ\ÙHÝšXÝŽÂ‚ˆ[˜Ý[ÛˆÚÝÕXŠX’Y
-HÂˆØÝ[Y[œ]Y\žTÙ[XÝÜ[
-‹œ[™[ŠK™›Ü‘XXÚ
-[˜Ý[Ûˆ
-[™[
-HÂˆ[™[˜Û\ÜÓ\ÝÙÙÛJ˜XÝ]™H‹[™[šYOOHX’Y
-NÂˆJNÂ‚ˆØÝ[Y[œ]Y\žTÙ[XÝÜ[
-‹›˜]ˆ]ÛˆŠK™›Ü‘XXÚ
-[˜Ý[Ûˆ
-]ÛŠHÂˆ]Û‹˜Û\ÜÓ\ÝÙÙÛJ˜XÝ]™H‹]Û‹™]\Ù]XˆOOHX’Y
-NÂˆJNÂ‚ˆÚ[™ÝËœØÜ›ÛÊÂˆÜˆØÝ[Y[œ]Y\žTÙ[XÝÜŠ‹›˜]ˆŠK›Ù™œÙ]Üˆ™Z]š[ÜŽˆœÛ[ÛÝ‚ˆJNÂˆB‚ˆØÝ[Y[œ]Y\žTÙ[XÝÜ[
-–Ù]K]X—HŠK™›Ü‘XXÚ
-[˜Ý[Ûˆ
-]ÛŠHÂˆ]Û‹˜Y]™[\Ý[™\Š˜ÛXÚÈ‹[˜Ý[Ûˆ
-
-HÂˆÚÝÕXŠ]Û‹™]\Ù]XŠNÂˆJNÂˆJNÂ‚ˆØÝ[Y[œ]Y\žTÙ[XÝÜ[
-–Ù]KYÛ×HŠK™›Ü‘XXÚ
-[˜Ý[Ûˆ
-]ÛŠHÂˆ]Û‹˜Y]™[\Ý[™\Š˜ÛXÚÈ‹[˜Ý[Ûˆ
-
-HÂˆÚÝÕXŠ]Û‹™]\Ù]™ÛÊNÂˆJNÂˆJNÂ‚ˆØÝ[Y[™Ù][[Y[žRY
-œÚ\™PˆŠK˜Y]™[\Ý[™\Š˜ÛXÚÈ‹\Þ[˜È[˜Ý[Ûˆ
-
-HÂˆ˜\ˆÚ\™Q]HHÂˆ]Nˆ–Y[ÝÈÝÜ›QÙX\œÈ’SÑÓÕÈX[HH‹ˆ^ˆ–Y[ÝÈÝÜ›QÙX\œÈš\œÝ^YX\ˆ’SÑÓÕÈ“Ú[[™ÙH™Y™\™[˜ÙHÝZYKˆ‹ˆ\›ˆÚ[™ÝË›ØØ][Û‹š™Y‚ˆNÂ‚ˆžHÂˆYˆ
-˜]šYØ]Ü‹œÚ\™JHÂˆ]ØZ]˜]šYØ]Ü‹œÚ\™JÚ\™Q]JNÂˆ™]\›ŽÂˆB‚ˆ]ØZ]˜]šYØ]Ü‹˜Û\›Ø\™Üš]U^
-Ú[™ÝË›ØØ][Û‹š™YŠNÂˆÚ[™ÝË˜[\
-\[šÈÛÜYYˆŠNÂˆHØ]Ú
-\œ›ÜŠHÂˆ™]\›ŽÂˆBˆJNÂŸJ
-JNÂ
+const missionNames=["Drone Survey","Exploding Seeds","Flip the Rock","Lucky Leaves","Reaching Roots","Leafcutter Frenzy","Humongous Fungus","Tangled","Research Platform","Fragile Microhabitats","Window to the Past","Forest Elder","Keystone Species","Seeds of Renewal","Biocentric Architecture"];
+const missionGrid=document.getElementById("missionGrid");
+missionGrid.innerHTML=missionNames.map((name,index)=>`<div class="mission"><label><span><b>M${String(index+1).padStart(2,"0")}</b> ${name}</span><input class="mission-points" type="number" min="0" step="5" value="0" aria-label="${name} practice points"></label></div>`).join("");
+const precisionMap={0:0,1:10,2:15,3:25,4:35,5:50,6:50};
+function updateScore(){const mission=[...document.querySelectorAll(".mission-points")].reduce((sum,input)=>sum+(Number(input.value)||0),0);const inspection=document.getElementById("inspection").checked?20:0;const precision=precisionMap[Number(document.getElementById("precision").value)]||0;document.getElementById("missionTotal").textContent=mission;document.getElementById("inspectionTotal").textContent=inspection;document.getElementById("precisionTotal").textContent=precision;document.getElementById("scoreTotal").textContent=mission+inspection+precision;}
+document.getElementById("missions").addEventListener("input",updateScore);document.getElementById("resetScore").addEventListener("click",()=>{document.querySelectorAll(".mission-points").forEach(input=>{input.value=0});document.getElementById("inspection").checked=false;document.getElementById("precision").value="6";updateScore();});updateScore();
+function showTab(id){document.querySelectorAll(".panel").forEach(panel=>panel.classList.toggle("active",panel.id===id));document.querySelectorAll(".nav button").forEach(button=>button.classList.toggle("active",button.dataset.tab===id));window.scrollTo({top:document.querySelector(".nav").offsetTop,behavior:"smooth"});}
+document.querySelectorAll("[data-tab]").forEach(button=>button.addEventListener("click",()=>showTab(button.dataset.tab)));document.querySelectorAll("[data-go]").forEach(button=>button.addEventListener("click",()=>showTab(button.dataset.go)));
+const storageKey="yellow-stormgears-bioglow-v2";
+function loadState(){let state={};try{state=JSON.parse(localStorage.getItem(storageKey)||"{}");}catch(error){state={};}document.querySelectorAll("[data-progress]").forEach((input,index)=>{input.checked=Boolean(state.checks&&state.checks[index]);input.closest(".check").classList.toggle("done",input.checked);});document.querySelectorAll("[data-note]").forEach(area=>{area.value=state.notes&&state.notes[area.dataset.note]?state.notes[area.dataset.note]:"";});updateProgress();}
+function saveState(){const checks=[...document.querySelectorAll("[data-progress]")].map(input=>input.checked);const notes={};document.querySelectorAll("[data-note]").forEach(area=>{notes[area.dataset.note]=area.value;});localStorage.setItem(storageKey,JSON.stringify({checks,notes}));updateProgress();}
+function updateProgress(){const checks=[...document.querySelectorAll("[data-progress]")];const done=checks.filter(input=>input.checked).length;const pct=checks.length?Math.round(done/checks.length*100):0;document.getElementById("progressBar").style.width=`${pct}%`;document.getElementById("progressLabel").textContent=`${pct}% team prep complete`;checks.forEach(input=>input.closest(".check").classList.toggle("done",input.checked));}
+document.querySelectorAll("[data-progress],[data-note]").forEach(element=>element.addEventListener("input",saveState));loadState();
+document.getElementById("quizForm").addEventListener("submit",event=>{event.preventDefault();const answers={q1:"b",q2:"c",q3:"b",q4:"a",q5:"b",q6:"c"};let score=0;Object.entries(answers).forEach(([name,correct])=>{const picked=document.querySelector(`input[name="${name}"]:checked`);if(picked&&picked.value===correct)score+=1;});const msg=score===6?"Excellent. BIOGLOW experts in training! ðŸ†":score>=4?"Great work. Review the questions you missed and try again. ðŸŒŸ":"Good start. Use the app sections to review and try again. ðŸŒ±";document.getElementById("quizResult").textContent=`${score}/6 - ${msg}`;});
+document.getElementById("shareBtn").addEventListener("click",async()=>{const shareData={title:"Yellow StormGears BIOGLOW Team HQ",text:"Open our Yellow StormGears BIOGLOW learning app.",url:window.location.href};try{if(navigator.share){await navigator.share(shareData);}else{await navigator.clipboard.writeText(window.location.href);alert("App link copied.");}}catch(error){}});
